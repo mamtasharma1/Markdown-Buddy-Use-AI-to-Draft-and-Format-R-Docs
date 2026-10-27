@@ -16,4 +16,5 @@ AI Assistance Declaration: I used ChatGPT (GPT-6, October 16, 2026) to suggest a
 - License
 - AI assistance disclosure
 
-This outline includes more than three common README sections, including Overview, Installation, and Example Usage. Before submitting, compare the structure with the GitHub Markdown Guide and a README in a relevant tidyverse repository, as required by the assignment.
+This outline includes more than three common README sections, including Overview, Installation, and Example Usage. 
+https://github.com/mamtasharma1/Markdown-Buddy-Use-AI-to-Draft-and-Format-R-Docs/
