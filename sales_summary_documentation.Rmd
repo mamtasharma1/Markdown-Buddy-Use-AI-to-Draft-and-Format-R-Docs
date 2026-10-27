@@ -1,0 +1,83 @@
+---
+title: "Documentation: Synthetic Sales Summary"
+author: "Mamta Sharma"
+date: "October 16, 2026"
+output: html_document
+---
+
+<!--
+AI Assistance Declaration: I used ChatGPT (GPT-6, October 16, 2026) for documentation structure and wording suggestions. Prompts are listed in Appendix_AI_Prompts.md. I will verify the script by running it in R and preview this document by knitting it in RStudio. All final calculations are my responsibility.
+-->
+
+# Purpose
+
+The `sales_summary.R` script demonstrates a basic sales analysis using a small, synthetic dataset. It calculates sales for each sample item, summarizes sales by category, prints the summary, identifies the category with the largest total, and draws a bar chart.
+
+The data is fictional and is included directly in the script. No external dataset is needed.
+
+## Inputs
+
+The script creates a data frame named `sales` with these fields:
+
+- `category`: the product group.
+- `item`: the sample product name.
+- `quantity`: the number of units.
+- `unit_price`: the price per unit.
+
+The values are examples for learning and should not be interpreted as actual business results.
+
+## Processing Steps
+
+1. Calculate `total_sales` for each row by multiplying quantity by unit price.
+2. Use `aggregate()` to add sales within each category.
+3. Sort the category totals from largest to smallest.
+4. Print the summary and identify the first category in the sorted table.
+5. Draw a bar chart of category totals.
+
+## Example Code
+
+The following short example shows the calculation used by the script:
+
+```{r example-calculation, eval=FALSE}
+sales$total_sales <- sales$quantity * sales$unit_price
+```
+
+The following example shows how the summary is created:
+
+```{r example-summary, eval=FALSE}
+category_summary <- aggregate(
+  total_sales ~ category,
+  data = sales,
+  FUN = sum
+)
+```
+
+These chunks are marked `eval=FALSE` so this document can explain the code without depending on objects created in a separate R session. Run `sales_summary.R` to produce the full results and chart.
+
+## Outputs
+
+When the script is run in R, it should produce:
+
+- A console table of total sales by category.
+- A console message naming the category with the highest total.
+- A bar chart showing total sales for each category.
+
+The results should be confirmed by running the script. This document describes the intended outputs; it does not claim that the code has been executed on the reader's computer.
+
+## Dependencies
+
+The script uses base R functions and does not require extra packages. To knit this R Markdown file to HTML, the `rmarkdown` package is needed.
+
+## Limitations
+
+- The dataset is very small and synthetic.
+- The example does not handle missing values or validate user-provided input.
+- The chart is for demonstration and is not intended for business reporting.
+
+## Verification Checklist
+
+- [ ] Run `sales_summary.R` in RStudio and check for errors.
+- [ ] Compare the printed category totals with a manual check or spreadsheet calculation.
+- [ ] Confirm that the bar chart labels and title are readable.
+- [ ] Knit this `.Rmd` file to HTML and check the headings and code formatting.
+- [ ] Make any needed corrections before submission.
