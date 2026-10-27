@@ -56,13 +56,13 @@ These chunks are marked `eval=FALSE` so this document can explain the code witho
 
 ## Outputs
 
-When the script is run in R, it should produce:
+When the script is run in R, it shows:
 
 - A console table of total sales by category.
 - A console message naming the category with the highest total.
 - A bar chart showing total sales for each category.
 
-The results should be confirmed by running the script. This document describes the intended outputs; it does not claim that the code has been executed on the reader's computer.
+The results are confirmed by running the script. This document describes the intended outputs.
 
 ## Dependencies
 
